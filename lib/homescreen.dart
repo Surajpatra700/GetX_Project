@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_project/screen_one.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -72,6 +73,16 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
+          Center(
+              child: Padding(
+            padding: const EdgeInsets.only(top: 25.0),
+            child: TextButton(
+                onPressed: () {
+                  //Get.to(ScreenOne(name: "Suraj",));
+                  Get.toNamed("/one", arguments: ["Suraj"]);
+                },
+                child: Text("Navigate")),
+          )),
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {

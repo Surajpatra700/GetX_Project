@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_project/homescreen.dart';
+import 'package:getx_project/screen_one.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomeScreen(),
+      getPages: [
+        GetPage(name: "/", page: ()=> HomeScreen()),
+        GetPage(name: "/one", page: () => ScreenOne(name: "Suraj")),
+      ],
     );
   }
 }
