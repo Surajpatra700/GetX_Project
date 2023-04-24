@@ -73,6 +73,33 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
+
+          Card(
+            child: ListTile(
+              title: Text("message".tr),
+              subtitle: Text("name".tr),
+            ),
+          ),
+
+          SizedBox(
+            height: 50,
+          ),
+          
+          Row(
+            children: [
+              OutlinedButton(
+                  onPressed: () {
+                    Get.updateLocale(Locale("en", "US"));
+                  },
+                  child: Text("English")),
+
+              SizedBox(width: 30,),
+
+              OutlinedButton(onPressed: () {
+                Get.updateLocale(Locale("hi", "IN"));
+              }, child: Text("Hindi")),
+            ],
+          ),
           Center(
               child: Padding(
             padding: const EdgeInsets.only(top: 25.0),

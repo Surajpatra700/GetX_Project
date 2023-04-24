@@ -1,7 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_project/getX_project2.dart';
+import 'package:getx_project/getX_project3.dart';
 import 'package:getx_project/homescreen.dart';
+import 'package:getx_project/languages.dart';
 import 'package:getx_project/screen_one.dart';
+import 'package:getx_project/timer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,11 +21,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      translations: Language(),
+      locale: Locale("en", "US"),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: ProjectThree(),
       getPages: [
         GetPage(name: "/", page: ()=> HomeScreen()),
         GetPage(name: "/one", page: () => ScreenOne(name: "Suraj")),
