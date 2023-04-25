@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:getx_project/getX_project2.dart';
 import 'package:getx_project/getX_project3.dart';
 import 'package:getx_project/homescreen.dart';
+import 'package:getx_project/image_picking.dart';
 import 'package:getx_project/languages.dart';
+import 'package:getx_project/login_signin.dart';
 import 'package:getx_project/screen_one.dart';
 import 'package:getx_project/timer.dart';
 
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ProjectThree(),
+      home: Login_SignUp(),
       getPages: [
         GetPage(name: "/", page: ()=> HomeScreen()),
         GetPage(name: "/one", page: () => ScreenOne(name: "Suraj")),
