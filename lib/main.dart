@@ -1,4 +1,4 @@
-import 'dart:async';
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,14 +8,17 @@ import 'package:getx_project/homescreen.dart';
 import 'package:getx_project/image_picking.dart';
 import 'package:getx_project/languages.dart';
 import 'package:getx_project/login_signin.dart';
+import 'package:getx_project/resources/getx_localization/languages.dart';
+import 'package:getx_project/resources/routes/routes.dart';
 import 'package:getx_project/screen_one.dart';
 import 'package:getx_project/timer.dart';
-
+import 'package:getx_project/view/splash_screen.dart';
 void main() {
   runApp(const MyApp());
-}
+} 
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -23,17 +26,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      translations: Language(),
-      locale: Locale("en", "US"),
+      translations: Languages(),
+      locale: Locale("hi", "IN"),
+      //fallbackLocale: Locale("en","US"),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login_SignUp(),
-      getPages: [
-        GetPage(name: "/", page: ()=> HomeScreen()),
-        GetPage(name: "/one", page: () => ScreenOne(name: "Suraj")),
-      ],
+      //home: HomeScreen(),
+      // getPages: [
+      //   GetPage(name: "/", page: ()=> HomeScreen()),
+      //   GetPage(name: "/one", page: () => ScreenOne(name: "Suraj")),
+      // ],
+      getPages: AppRoutes.appRoutes(),
+      
     );
   }
 }
@@ -108,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ), // This yggggggggggggggggggg comma makes auto-formatting nicer for build methods.
     );
   }
 }

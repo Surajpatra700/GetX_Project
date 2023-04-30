@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Get.defaultDialog(
                   title: "Delete Chat",
                   titlePadding: EdgeInsets.only(top: 20),
-                  contentPadding: EdgeInsets.all(20),
+                  contentPadding: EdgeInsets.all(20), 
                   middleText:
                       "Are you sure want to delete this chat ?", // middle text doesn't allow more than 3 lines of text therefore we use content.
                   confirm: TextButton(
